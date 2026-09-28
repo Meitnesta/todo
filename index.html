@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TODO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>TODO</h1>
+
+    <form id="new-todo-form" class="new-todo">
+      <input id="toggle-all" type="checkbox" aria-label="すべて完了/未完了にする" hidden>
+      <input id="new-todo" type="text" placeholder="やることを入力して Enter" autocomplete="off" autofocus>
+    </form>
+
+    <ul id="todo-list" class="todo-list"></ul>
+
+    <footer id="footer" class="footer" hidden>
+      <span id="count"></span>
+      <nav class="filters">
+        <a href="#/all" data-filter="all">すべて</a>
+        <a href="#/active" data-filter="active">未完了</a>
+        <a href="#/completed" data-filter="completed">完了済み</a>
+      </nav>
+      <button id="clear-completed" type="button" hidden>完了済みを削除</button>
+    </footer>
+
+    <p class="hint">項目をダブルクリックで編集 ／ データはこのブラウザに保存されます</p>
+  </main>
+
+  <script src="todo-core.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
